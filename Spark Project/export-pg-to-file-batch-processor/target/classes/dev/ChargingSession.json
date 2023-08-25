@@ -1,0 +1,11 @@
+{
+   "appName": "PgTOFileBatchProcessor",
+   "fetchsize": 10,
+   "methodType": "D1Type",
+   "typeA": {
+      "date_collect_query": "select Distinct(Date(created_date))::varchar from charging_session  where updated_date::date = '%s'"
+   },
+   "buckedName": "s3a://testuploadbucket123",
+   "objcat":"chargingSession",
+   "query": "select * from charging_session where updated_date::date = '%s'"
+}
